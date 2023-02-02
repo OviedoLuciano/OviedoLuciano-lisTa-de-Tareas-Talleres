@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap');
+body {
+        background-image: url("Imagen/club-atletico-talleres-argentine-football-club-blue-metal-texture-metal-logo-emblem.jpg");
+        background-position: center center;
+    }
+
+*{
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    min-height: 800px;
+    margin: 4rem auto;
+}
+
+.columna-1 {
+    min-height: 800px;
+    border-top-left-radius: 1em;
+    border-bottom-left-radius: 1em;
+/* From https://css.glass */
+
+background: rgba(23, 33, 82, 0.637);
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(20px);
+-webkit-backdrop-filter: blur(20px);
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+h4 {
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+form {
+    margin: 2rem 1rem 1rem 1rem;
+}
+
+
+.boton {
+	background:linear-gradient(to bottom, rgb(28, 39, 97, 0.637) 5%, rgba(14, 20, 49, 0.637) 100%);
+
+	border-radius:8px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-size:1rem;
+	padding:0.5rem;
+	text-decoration:none;
+    border: 1px solid #fff;
+}
+
+
+.redes {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.redes i {
+    margin: auto 1rem;
+   color:rgba(255, 255, 255, 0.842)
+}
+
+.redes i:hover {
+    cursor: pointer;
+    color: #599bb3;
+}
+
+.columna-2 {
+min-height: 800px;
+border-top-right-radius: 1em;
+border-bottom-right-radius: 1em;
+    /* From https://css.glass */
+background: rgb(28, 39, 97, 0.637);
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(20px);
+-webkit-backdrop-filter: blur(20px);
+}
+
+ul {
+    list-style-type: none;
+}
+
+.lista {
+    margin-top : 2rem;
+}
+
+li {
+    margin: 1rem 2rem 0.5rem 2rem;
+    border-left: solid 3px rgba(241, 141, 11, 0.644);
+    border-top-right-radius: 1em;
+    border-bottom-right-radius: 1em;
+    padding: 0.5rem;
+    background: rgba(255, 255, 255, 0.801);
+    color: #000;
+}
+
+li h4 {
+    margin-left: 0.5rem;
+}
+
+li p {
+    color: rgb(51, 51, 51);
+    margin-left: 0.5rem;
+
+}
+
+.btn-editar {
+    background: none;
+    border: none;
+    float: right;
+    size: 1.5rem;
+    margin: 0;
+    padding: 0;
+    color: rgb(28, 39, 97);
+    margin-right: 0.5rem;
+}
+
+.btn-borrar {
+    background: none;
+    border: none;
+    float: right;
+    size: 1.5rem;
+    margin: 0;
+    padding: 0;
+    color: red;
+}
+
+
