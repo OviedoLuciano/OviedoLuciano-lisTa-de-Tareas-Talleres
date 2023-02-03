@@ -97,7 +97,7 @@ li {
     border-top-right-radius: 1em;
     border-bottom-right-radius: 1em;
     padding: 0.5rem;
-    background: rgba(255, 255, 255, 0.801);
+    background: #fff;
     color: #000;
 }
 
@@ -138,3 +138,47 @@ li p {
     padding: 20px;
 }
 
+
+
+@media (max-width: 576px) { 
+    .columna-1 {
+        border-radius:20px 20px 0 0;
+        min-height: 100px;
+    }
+
+    .redes {
+        display: none;
+    }
+    .derechos-autor {
+        display: none;
+    }
+    .logo {
+        margin: 0;
+    }
+    .logo img {
+        width: 30%;
+    }
+    .columna-2 {
+        border-radius:0 0 20px 20px;
+        background: rgba(23, 33, 82, 0.637);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        min-height: 200px;
+    }
+
+    li {
+        border-left: solid 3px rgba(241, 141, 11, 0.644);
+        border-top-right-radius: 1em;
+        border-bottom-right-radius: 1em;
+        background: #fff;
+        color: #000;
+        font-size: 15px;
+        margin: 0;
+    }
+    li h4 {
+        font-size: 20px;
+    }
+
+   
+ }
