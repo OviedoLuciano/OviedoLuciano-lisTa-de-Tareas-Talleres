@@ -20,16 +20,21 @@ deleteDoc, doc, getDoc, updateDoc } from "https://www.gstatic.com/firebasejs/9.1
   const app = initializeApp(firebaseConfig);
   const db = getFirestore();
 
-  export const guardarTarea = (titulo, fecha) =>
+    // AGREGAR
+    export const guardarTarea = (titulo, fecha) =>
     addDoc(collection(db, 'Tareas'), {titulo: titulo, fecha: fecha})
   
-
+    // TRAER
     export const obtenerTareas = () => getDocs(collection(db, 'Tareas'))
 
+    // TRAER EN TIEMPO REAL
     export const onGetTasks = (callback) => onSnapshot(collection(db, 'Tareas'), callback)
 
+    // BORRAR
     export const borrarTarea = (id) => deleteDoc(doc(db, 'Tareas', id));
 
+    // TRAER UNA SOLA
     export const obtenerTarea = id => getDoc(doc(db, 'Tareas', id))
 
+    // EDITAR
     export const editarTarea = (id, newFields) => updateDoc(doc(db, 'Tareas', id), newFields)

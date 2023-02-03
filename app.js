@@ -8,7 +8,7 @@ let id = "";
 
 window.addEventListener('DOMContentLoaded', async () => {
     
-   
+//    TRAER TAREAS
 onGetTasks((querySnapshot) => {
    let html = '';
 
@@ -31,15 +31,24 @@ onGetTasks((querySnapshot) => {
 
 lista.innerHTML = html;
 
+// BORRAR
 const btnBorrar = lista.querySelectorAll('.btn-borrar')
 
 btnBorrar.forEach(btn => {
     btn.addEventListener('click', ({target: {dataset}}) => {
 borrarTarea(dataset.id)
-console.log('Borrando')
+Swal.fire({
+    position: 'center',
+    icon: 'error',
+    title: 'Tarea eliminada',
+    showConfirmButton: false,
+    timer: 1500
+  })
     })
 })
 
+
+// EDITAR
 const btnEditar = lista.querySelectorAll('.btn-editar')
 
 btnEditar.forEach((btn) => {
@@ -59,19 +68,36 @@ tareasForm['boton-submit'].innerText = 'Editar'
     })
 })
 
-
+// AGREGAR
 tareasForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const titulo = tareasForm['titulo-tarea']
     const fecha = tareasForm['fecha-tarea']
 
+// CHEQUEAR ESTADO
     if(!editStatus){
-    guardarTarea(titulo.value, fecha.value)
+    // AGREGAR BTN
+        guardarTarea(titulo.value, fecha.value)
+    Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'Tarea agregada con éxito',
+        showConfirmButton: false,
+        timer: 1500
+    })
     } else {
+    // EDITAR BTN
     editarTarea(id, {
         titulo: titulo.value,
-        fecha: fecha.value
+        fecha: fecha.value,
     });
+    Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'Tarea editada',
+        showConfirmButton: false,
+        timer: 1500
+      })
 
     editStatus = false;
     }
