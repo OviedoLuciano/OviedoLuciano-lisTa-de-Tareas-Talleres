@@ -85,13 +85,14 @@ backdrop-filter: blur(20px);
 
 ul {
     list-style-type: none;
+    width: 700px;
 }
 
 .lista {
     margin-top : 2rem;
 }
 
-li {
+/* li {
     margin: 1rem 2rem 0.5rem 2rem;
     border-left: solid 3px rgba(241, 141, 11, 0.644);
     border-top-right-radius: 1em;
@@ -99,16 +100,39 @@ li {
     padding: 0.5rem;
     background: #fff;
     color: #000;
+} */
+
+li {
+    padding: 5px;
+  overflow: auto;
+  background-color: #eee;
+  color: #000;
+  border-radius: 15px;
 }
 
-li h4 {
+li:hover {
+    background: #eee;
+    cursor: pointer;
+    border: 1px solid #000;
+    border-radius: 20px;
+  }
+
+/* li h4 {
     margin-left: 0.5rem;
-}
+} */
 
-li p {
+li h3 {
+    font: bold 20px/1.5 Helvetica, Verdana, sans-serif;
+}
+/* li p {
     color: rgb(51, 51, 51);
     margin-left: 0.5rem;
 
+} */
+
+li p {
+    font: 200 15px/1.5 Georgia, serif;
+    color: #000
 }
 
 .btn-editar {
@@ -176,7 +200,7 @@ li p {
         font-size: 15px;
         margin: 0;
     }
-    li h4 {
+    li h3 {
         font-size: 20px;
     }
 

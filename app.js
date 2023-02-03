@@ -17,10 +17,10 @@ onGetTasks((querySnapshot) => {
     html += `
     <ul>
     <li>
-    <h4>${tarea.titulo}. 
+    <h3>${tarea.titulo}. 
     <button class="btn-borrar bi bi-x-circle" data-id="${doc.id}"></button>
     <button class="btn-editar bi bi-pencil-square" data-id="${doc.id}"></button>
-    </h4>
+    </h3>
     
     <p>${tarea.fecha}</p>
     </li> 
