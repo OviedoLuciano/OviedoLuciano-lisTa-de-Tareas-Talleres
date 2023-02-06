@@ -11,6 +11,7 @@ body {
 
 .container {
     min-height: 800px;
+    width: auto;
     margin: 4rem auto;
 }
 
@@ -85,7 +86,7 @@ backdrop-filter: blur(20px);
 
 ul {
     list-style-type: none;
-    width: 700px;
+    max-width: 700px;
 }
 
 .lista {
@@ -108,6 +109,8 @@ li {
   background-color: #eee;
   color: #000;
   border-radius: 15px;
+  border-left: solid 3px rgba(241, 141, 11, 0.644);
+
 }
 
 li:hover {
@@ -162,12 +165,26 @@ li p {
     padding: 20px;
 }
 
+.logo-lista {
+    display: none;
+
+   }
 
 
-@media (max-width: 576px) { 
+
+@media (max-width: 767px) { 
+.container {
+    margin: 1rem;
+    max-width: 360px;
+    max-height: 120px;
+}
+
     .columna-1 {
         border-radius:20px 20px 0 0;
-        min-height: 100px;
+        min-height: 50px;
+    }
+    form {
+        margin: 0;
     }
 
     .redes {
@@ -176,11 +193,12 @@ li p {
     .derechos-autor {
         display: none;
     }
-    .logo {
-        margin: 0;
-    }
     .logo img {
+        display:none;
+    }
+    .logo-lista img {
         width: 30%;
+        display: block;
     }
     .columna-2 {
         border-radius:0 0 20px 20px;
@@ -188,9 +206,16 @@ li p {
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
-        min-height: 200px;
+        min-height: 50px;
+        margin: 0;
+        padding: 0;
     }
 
+    ul {
+        margin: -1rem;
+        padding: 1rem;
+        list-style: none;
+    }
     li {
         border-left: solid 3px rgba(241, 141, 11, 0.644);
         border-top-right-radius: 1em;
@@ -198,11 +223,17 @@ li p {
         background: #fff;
         color: #000;
         font-size: 15px;
-        margin: 0;
+
     }
     li h3 {
         font-size: 20px;
     }
 
-   
- }
+   .logo-lista {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 1rem ;
+   }
+
+}
